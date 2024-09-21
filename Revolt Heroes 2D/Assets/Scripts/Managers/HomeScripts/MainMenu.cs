@@ -5,12 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
-    public void EscenaJuego()
+    // Método para iniciar el juego en un jugador
+    public void JugarUnJugador()
     {
-        SceneManager.LoadScene("Nivel 1");
+        SceneManager.LoadScene("ElegirJugador");
     }
 
+    // Método para iniciar el juego en dos jugadores
+    public void JugarDosJugadores()
+    {
+        SceneManager.LoadScene("ElegirJugador");
+        // Aquí puedes agregar lógica adicional si hay diferencias entre los modos
+    }
+
+    // Método para ir a la escena de Opciones
+    public void IrAOpciones()
+    {
+        SceneManager.LoadScene("Opciones");
+    }
+
+    // Método para salir del juego
     public void SalirDelJuego()
     {
         Application.Quit();
