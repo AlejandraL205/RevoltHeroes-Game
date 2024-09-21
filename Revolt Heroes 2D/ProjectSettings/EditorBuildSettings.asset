@@ -8,4 +8,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menu/Home.unity
+    guid: 9fd1726ee2d8e5a47965bd2549e6ece7
+  - enabled: 1
+    path: Assets/Scenes/Menu/Opciones.unity
+    guid: f50eb6cc3f9245e42b4368fdad2b1bbd
+  - enabled: 1
+    path: Assets/Scenes/Gameplay/Nivel 1.unity
+    guid: 64bd4277867e1f34597f710dfe0a5217
+  - enabled: 1
+    path: Assets/Scenes/Gameplay/Nivel 2.unity
+    guid: 50d4f23fe4f7a6a4c807829af43d57c7
+  - enabled: 1
+    path: Assets/Scenes/Menu/ElegirJugador.unity
+    guid: 886b90a040061464cb306098ff599888
+  - enabled: 1
+    path: Assets/Scenes/Menu/Pausa.unity
+    guid: 5e2c5a7ae166f3b418b8c4e73a1b1e40
   m_configObjects: {}
