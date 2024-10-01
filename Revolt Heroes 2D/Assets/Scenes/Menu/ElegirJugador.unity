@@ -571,8 +571,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 955537294}
+  - component: {fileID: 955537295}
   m_Layer: 5
-  m_Name: PlayerSelector (1)
+  m_Name: Personaje 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -599,6 +600,21 @@ RectTransform:
   m_AnchoredPosition: {x: 237, y: 52.304}
   m_SizeDelta: {x: 254.763, y: 254.763}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &955537295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955537293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4a3be28f5eb80488753d627589555c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterButtons:
+  - {fileID: 0}
+  currentPlayer: 0
 --- !u!1 &1014941740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,7 +1195,7 @@ GameObject:
   - component: {fileID: 1321768356}
   - component: {fileID: 1321768355}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Personaje 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1384,8 +1400,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1730400309}
+  - component: {fileID: 1730400310}
   m_Layer: 5
-  m_Name: PlayerSelector
+  m_Name: Personaje 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1412,6 +1429,20 @@ RectTransform:
   m_AnchoredPosition: {x: -227.93, y: 52.304}
   m_SizeDelta: {x: 254.763, y: 254.763}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1730400310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730400308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4a3be28f5eb80488753d627589555c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterButtons: []
+  currentPlayer: 0
 --- !u!1 &1782567202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,7 +1500,7 @@ GameObject:
   - component: {fileID: 1862985702}
   - component: {fileID: 1862985701}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Personaje 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

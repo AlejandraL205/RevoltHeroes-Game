@@ -7,23 +7,11 @@ public class SelectPersonajeManager : MonoBehaviour
 {
     public void OnPlayButtonClicked()
     {
-        // Verifica cuántos jugadores hay
+        // Verificamos si el jugador 1 ha seleccionado un personaje
         if (!string.IsNullOrEmpty(PlayerStorage.player1Character))
         {
-            if (string.IsNullOrEmpty(PlayerStorage.player2Character))
-            {
-                // Si solo hay un jugador
-                PlayerSpawner playerSpawner = FindObjectOfType<PlayerSpawner>();
-                playerSpawner.SpawnCharacter(); // Spawnea el personaje
-                SceneManager.LoadScene("Nivel 1"); // Carga la escena
-            }
-            else
-            {
-                // Si hay dos jugadores
-                PlayerSpawner playerSpawner = FindObjectOfType<PlayerSpawner>();
-                playerSpawner.SpawnCharacter(); // Spawnea los personajes
-                SceneManager.LoadScene("Nivel 1"); // Carga la escena
-            }
+            // Solo cargamos el nivel si hay un jugador 1 seleccionado
+            SceneManager.LoadScene("Nivel 1");
         }
         else
         {

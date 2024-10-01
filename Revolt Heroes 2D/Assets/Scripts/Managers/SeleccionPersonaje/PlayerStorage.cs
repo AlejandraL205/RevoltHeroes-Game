@@ -18,4 +18,11 @@ public class PlayerStorage : MonoBehaviour
             player2Character = characterName; // Guarda el personaje del jugador 2
         }
     }
+
+    // Método para resetear los personajes seleccionados (Opcional)
+    public static void ResetCharacters()
+    {
+        player1Character = null;
+        player2Character = null;
+    }
 }

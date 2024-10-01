@@ -8,14 +8,18 @@ public class MainMenu : MonoBehaviour
     // Método para iniciar el juego en un jugador
     public void JugarUnJugador()
     {
-        SceneManager.LoadScene("ElegirJugador");
+        SceneManager.LoadScene("ElegirJugador"); // Lleva a la selección de personaje
     }
 
     // Método para iniciar el juego en dos jugadores
     public void JugarDosJugadores()
     {
-        SceneManager.LoadScene("ElegirJugador");
-        // Aquí puedes agregar lógica adicional si hay diferencias entre los modos
+        // Seteamos personajes por defecto para los dos jugadores
+        PlayerStorage.SetCharacter(1, "Personaje1");
+        PlayerStorage.SetCharacter(2, "Personaje2");
+
+        // Carga directamente la escena del nivel 1
+        SceneManager.LoadScene("Nivel 1");
     }
 
     // Método para ir a la escena de Opciones
