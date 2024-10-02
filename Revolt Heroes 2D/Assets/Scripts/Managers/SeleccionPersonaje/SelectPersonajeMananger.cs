@@ -5,17 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class SelectPersonajeManager : MonoBehaviour
 {
+    public string defaultCharacter = "Leo"; // Nombre del personaje por defecto
+
     public void OnPlayButtonClicked()
     {
-        // Verificamos si el jugador 1 ha seleccionado un personaje
-        if (!string.IsNullOrEmpty(PlayerStorage.player1Character))
+        // Si no se ha seleccionado ningún personaje, asignar Leo por defecto
+        if (string.IsNullOrEmpty(PlayerStorage.player1Character))
         {
-            // Solo cargamos el nivel si hay un jugador 1 seleccionado
-            SceneManager.LoadScene("Nivel 1");
+            Debug.Log("No se ha seleccionado personaje, asignando Leo como personaje por defecto.");
+            PlayerStorage.SetCharacter(1, defaultCharacter); // Selecciona Leo como personaje por defecto
         }
-        else
-        {
-            Debug.LogWarning("No se ha seleccionado ningún personaje.");
-        }
+
+        // Cargar la escena del nivel solo si hay un personaje seleccionado
+        SceneManager.LoadScene("Nivel 1");
     }
 }

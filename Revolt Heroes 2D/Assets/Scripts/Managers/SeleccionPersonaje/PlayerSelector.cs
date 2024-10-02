@@ -6,19 +6,20 @@ using UnityEngine.UI;
 public class PlayerSelector : MonoBehaviour
 {
     public Button[] characterButtons; // Botones de selección de personajes
-    public int currentPlayer; // 1 para jugador 1, 2 para jugador 2
+    public int currentPlayer = 1; // 1 para jugador 1 (por defecto)
 
     void Start()
     {
         foreach (Button button in characterButtons)
         {
-            button.onClick.AddListener(() => OnCharacterSelected(button.name)); // Asigna la función de selección
+            // Asigna la función de selección usando una función anónima (lambda)
+            button.onClick.AddListener(() => OnCharacterSelected(button.name)); // button.name pasará el nombre del personaje
         }
     }
 
     void OnCharacterSelected(string characterName)
     {
-        PlayerStorage.SetCharacter(currentPlayer, characterName); // Guarda el personaje seleccionado
+        PlayerStorage.SetCharacter(currentPlayer, characterName); 
         Debug.Log($"Jugador {currentPlayer} seleccionó: {characterName}");
     }
 
