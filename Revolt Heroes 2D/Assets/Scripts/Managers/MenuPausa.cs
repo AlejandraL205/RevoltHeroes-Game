@@ -21,4 +21,17 @@ public class MenuPausa : MonoBehaviour
         botonPausa.SetActive(false);
     }
 
+    // Método para reiniciar el nivel actual
+    public void Reiniciar()
+    {
+        Time.timeScale = 1f; 
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
+
+    // Método para salir del juego
+    public void Salir()
+    {
+        Application.Quit(); // Cierra la aplicación (no funcionará en el editor de Unity)
+    }
+
 }
