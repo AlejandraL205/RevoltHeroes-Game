@@ -12134,8 +12134,8 @@ GameObject:
   - component: {fileID: 1554068170}
   - component: {fileID: 1554068169}
   - component: {fileID: 1554068168}
-  - component: {fileID: 1554068172}
   - component: {fileID: 1554068171}
+  - component: {fileID: 1554068172}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -12224,18 +12224,18 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554068167}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6d01829aaa455f543b89864de780018b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.875
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 131
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -12327,8 +12327,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xMargin: 1
   yMargin: 1
-  xSmooth: 8
-  ySmooth: 8
+  xSmooth: 4
+  ySmooth: 4
   maxXAndY: {x: 0, y: 0}
   minXAndY: {x: 0, y: 0}
 --- !u!1 &1566306681
@@ -12720,7 +12720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1483978012466152, guid: 3e952bb6975530c4fb608f138dcf949f, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1772962613630314, guid: 3e952bb6975530c4fb608f138dcf949f, type: 3}
       propertyPath: m_Name
@@ -12777,6 +12777,10 @@ PrefabInstance:
     - target: {fileID: 114808554431773334, guid: 3e952bb6975530c4fb608f138dcf949f, type: 3}
       propertyPath: jumpForce
       value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 114808554431773334, guid: 3e952bb6975530c4fb608f138dcf949f, type: 3}
+      propertyPath: bulletPrefab
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
