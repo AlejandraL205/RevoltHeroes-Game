@@ -144,34 +144,32 @@ public class Player : MonoBehaviour {
 	}
 
 	private void FixedUpdate()
-	{
-		if (!isDead)
-		{
-			if(!crouched && !lookingUp && !reloading)
-			hForce = Input.GetAxisRaw("Horizontal");
+{
+    if (!isDead)
+    {
+        // Movimiento horizontal
+        float hForce = Input.GetAxisRaw("Horizontal");
+        rb2d.velocity = new Vector2(hForce * speed, rb2d.velocity.y);
 
-			anim.SetFloat("Speed", Mathf.Abs(hForce));
+        // Salto
+        if (Input.GetButtonDown("Jump") && onGround)
+        {
+            rb2d.AddForce(Vector2.up * jumpForce);
+        }
 
-			rb2d.velocity = new Vector2(hForce * speed, rb2d.velocity.y);
+        // Comprobación de la animación y giro del personaje
+        anim.SetFloat("Speed", Mathf.Abs(hForce));
+        if (hForce > 0 && !facingRight)
+        {
+            Flip();
+        }
+        else if (hForce < 0 && facingRight)
+        {
+            Flip();
+        }
+    }
+}
 
-			if(hForce > 0 && !facingRight)
-			{
-				Flip();
-			}
-			else if(hForce < 0 && facingRight)
-			{
-				Flip();
-			}
-
-			if (jump)
-			{
-				anim.SetBool("Jump", true);
-				jump = false;
-				rb2d.AddForce(Vector2.up * jumpForce);
-			}
-
-		}
-	}
 
 	IEnumerator Reloading()
 	{
