@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 	public float fireRate = 0.5f;
 	public float reloadTime = 1f;
 	public int bullets = 6;
-	public int coins;
+	public int coins = 10;
 	public int bombs = 2;
 	public int upgradeCost = 20;
 

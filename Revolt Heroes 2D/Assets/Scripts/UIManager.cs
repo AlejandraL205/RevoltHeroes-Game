@@ -11,15 +11,23 @@ public class UIManager : MonoBehaviour {
 	public Text coinsText;
 	public Text bombsText;
 
-	// Use this for initialization
-	void Awake () {
+    public static GameManager gameManager;
+    // Use this for initialization
+    void Awake () {
 
 		UpdateHealthBar();
 		UpdateCoins();
 
 	}
-	
-	public void UpdateBulletsUI(int bullets)
+
+    void SetCoins(int coin)
+    {
+        gameManager.coins -= coin; // Descuento de monedas
+        FindObjectOfType<UIManager>().UpdateCoins(); // Actualiza el UI de monedas
+    }
+
+
+    public void UpdateBulletsUI(int bullets)
 	{
 		bulletsText.text = bullets.ToString();
 	}
